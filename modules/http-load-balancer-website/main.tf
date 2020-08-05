@@ -19,7 +19,7 @@ locals {
 }
 
 module "load_balancer" {
-  source = "github.com/gruntwork-io/terraform-google-load-balancer.git//modules/http-load-balancer?ref=tf12"
+  source = "../../../terraform-google-load-balancer/modules/http-load-balancer"
 
   name                  = local.website_domain_name_dashed
   project               = var.project
